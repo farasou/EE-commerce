@@ -1,0 +1,30 @@
+<app-header></app-header>
+<br> <br> 
+<section class="login py-5 border-top-1">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-8 align-item-center">
+                <div class="border">
+                    <h3 class="bg-gray p-4">Add Product</h3>
+                    <form *ngIf="!submitted">
+                        <fieldset class="p-4">
+                            <input type="text" placeholder="description" class="border p-3 w-100 my-2" required  #description=ngModel [(ngModel)]="product.description" name="description">
+                            <input type="text" placeholder="price" class="border p-3 w-100 my-2" required  #price=ngModel [(ngModel)]="product.price" name="price">
+                            <input type="text" placeholder="image" class="border p-3 w-100 my-2" required  #image=ngModel [(ngModel)]="product.image" name="image">
+                            <input type="text" placeholder="qteStock" class="border p-3 w-100 my-2" required  #qteStock=ngModel [(ngModel)]="product.qteStock" name="qteStock">
+                            
+                            <button type="submit" class="d-block py-3 px-5 bg-primary text-white border-0 rounded font-weight-bold mt-3" (click)="saveProduct()">Add</button>
+                            
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+
+<app-footer></app-footer>
