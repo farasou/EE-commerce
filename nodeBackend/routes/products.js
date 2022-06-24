@@ -59,6 +59,37 @@ router.post('/', async (req, res)=> {
     }
 })
 
+// ## Update a single product
+router.put('/:id', getProduct, async (req, res)=> {
+    try {
+        // note: could simply do await Product.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        // but this is more explicit + am making use of the getProduct middleware
+        if (req.body.sku) {
+            res.foundProduct.sku = req.body.sku;
+        }
+        if (req.body.name) {
+            res.foundProduct.name = req.body.name;
+        }
+        if (req.body.price) {
+            res.foundProduct.price = req.body.price;
+        }
+        if (req.body.quantity) {
+            res.foundProduct.quantity = req.body.quantity;
+        }
+        if (req.body.description) {
+            res.foundProduct.description = req.body.description;
+        }
+        if (req.body.image) {
+            res.foundProduct.image = req.body.image;
+        }
+        
+        const updatedProduct = await res.foundProduct.save();
+        res.json(updatedProduct);
+    } catch (error) {
+        res.json({'Error while updating a product ::': error.messaage});
+    }
+}
+
 
 
 
