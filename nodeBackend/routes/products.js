@@ -43,12 +43,12 @@ router.post('/', async (req, res)=> {
     // constructing a product object based on the model using the data send in body
     const newProductToInsert = new Product({
         sku: req.body.sku,
-        sku: req.body.name,
-        sku: req.body.date_added,
-        sku: req.body.price,
-        sku: req.body.quantity,
-        sku: req.body.description,
-        sku: req.body.image
+        name: req.body.name,
+        date_added: req.body.date_added,
+        price: req.body.price,
+        quantity: req.body.quantity,
+        description: req.body.description,
+        image: req.body.image
     });
 
     try {
