@@ -36,7 +36,28 @@ router.get('/:id', getProduct, (req, res)=> {
     res.send(res.foundProduct);
 })
 
+// ## the boring part of CRUD
+// ## Create a single product
 
+router.post('/', async (req, res)=> {
+    // constructing a product object based on the model using the data send in body
+    const newProductToInsert = new Product({
+        sku: req.body.sku,
+        sku: req.body.name,
+        sku: req.body.date_added,
+        sku: req.body.price,
+        sku: req.body.quantity,
+        sku: req.body.description,
+        sku: req.body.image
+    });
+
+    try {
+        const productObject = await newProductToInsert.save();
+        res.json('product added just now: ' + productObject);
+    } catch (error) {
+        res.json({'Error while inserting a product ::': error.messaage});
+    }
+})
 
 
 
