@@ -29,12 +29,12 @@ router.get('/', async (req, res)=> {
     } catch (error) {
         res.status(500).json({ 'Error while retrieving the products ::': error.messaage});
     }
-})
+});
 
 // ## GET One product
 router.get('/:id', getProduct, (req, res)=> {
     res.send(res.foundProduct);
-})
+});
 
 // ## the boring part of CRUD
 // ## Create a single product
@@ -57,7 +57,7 @@ router.post('/', async (req, res)=> {
     } catch (error) {
         res.json({'Error while inserting a product ::': error.messaage});
     }
-})
+});
 
 // ## Update a single product
 router.put('/:id', getProduct, async (req, res)=> {
@@ -88,9 +88,16 @@ router.put('/:id', getProduct, async (req, res)=> {
     } catch (error) {
         res.json({'Error while updating a product ::': error.messaage});
     }
-}
+});
 
+// ## Delete a single product
+router.delete('/:id', getProduct, async (req, res)=> {
+    try {
+        const deletedProduct = await res.foundProduct.remove();
+        res.json(deletedProduct);
+    } catch (error) {
+        res.json({'error while deleting a product': error.messaage});
+    }
+});
 
-
-
-module.exports = router
+module.exports = router;
