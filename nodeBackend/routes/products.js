@@ -31,6 +31,10 @@ router.get('/', async (req, res)=> {
     }
 })
 
+// ## GET One product
+router.get('/:id', getProduct, (req, res)=> {
+    res.send(res.foundProduct);
+})
 
 
 
