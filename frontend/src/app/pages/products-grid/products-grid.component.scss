@@ -1,7 +1,17 @@
-#products-grid-template{
-    width: 100%;
-    padding: 1rem;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+section{
+    position: relative;
+    #products-spinner{
+        position: absolute;
+        top: 30px;
+        right: 50%;
+        color: #e64b41;
+    }
+
+    #products-grid-template{
+        width: 100%;
+        padding: 1rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
 }
