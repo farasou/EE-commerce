@@ -8,6 +8,9 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    position: sticky;
+    top: 0;
     // border-bottom: 2px solid #000;
 
     #most-left{
@@ -88,9 +91,10 @@ header{
         button{
             height: 100%;
             border: none;
-            font-size: .8rem;
+            font-size: 1rem;
             text-transform: lowercase;
             padding: 0 1rem;
+            width: 200px;
             i{
                 margin-right: .5rem;
             }
