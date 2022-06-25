@@ -9,8 +9,9 @@ header{
     align-items: center;
     justify-content: space-between;
 
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 10;
     // border-bottom: 2px solid #000;
 
     #most-left{

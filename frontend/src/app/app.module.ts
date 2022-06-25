@@ -7,12 +7,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './pages/header/header.component';
 import { HeroFilterComponent } from './pages/hero-filter/hero-filter.component';
 import { ProductsGridComponent } from './pages/products-grid/products-grid.component';
+import { ProductCardComponent } from './pages/products-grid/product-card/product-card.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HeroFilterComponent,
-    ProductsGridComponent
+    ProductsGridComponent,
+    ProductCardComponent
   ],
   imports: [
     BrowserModule,
