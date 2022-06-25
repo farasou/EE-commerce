@@ -1,0 +1,34 @@
+<section>
+    
+    <div id="main-center-flex">
+        <div id="brand">
+            <h1><span>NOT</span>Tayara</h1>
+        </div>
+        
+        <div id="search-bar">
+            <label>
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="Search">
+            </label>
+        </div>
+
+        <div id="category-picker">
+            <div class="flex-item" *ngFor="let cat of categories">
+                <div class="header">
+                    <img src="{{cat.icon}}" alt="icon" width="30px">
+                </div>
+                <p>{{cat.name}}</p>
+            </div>
+        </div>
+        
+        
+        <div id="image-left-offset" class="img-offset">
+            <img src="https://www.tayara.tn/media/cover/10-cover.webp" alt="image to the left of search bar">
+        </div>
+        <div id="image-right-offset" class="img-offset">
+            <img src="https://www.tayara.tn/media/cover/ballons.webp" alt="image to the left of search bar" width="50px">
+        </div>
+    </div>
+
+
+</section>
