@@ -1,0 +1,38 @@
+<header>
+
+    <div id="most-left">
+        <div class="dropdown" id="help-button">
+            <button class="btn dropdown-toggle" type="button" id="helpMenuToggle" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-arrow-down-circle"></i>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="helpMenuToggle">
+                <li *ngFor="let link of helpLinks"><a class="dropdown-item" href="{{link.url}}">{{link.title}}<i class="bi bi-arrow-right"></i></a></li>
+            </ul>
+        </div>
+    
+        <div id="brand">
+            <span>NOT</span>Tayara
+        </div>
+    </div>
+
+    <div id="main-search">
+        <label>
+            <i class="bi bi-search"></i>
+            <input type="text" placeholder="Search">
+        </label>
+    </div>
+    
+    <div id="controls">
+        <button class="btn" id="auth-button">
+            <i class="bi bi-person"></i>
+            Login/Register
+        </button>
+
+        <button class="btn" id="add-new-product-button">
+            <i class="bi bi-plus-circle"></i>
+            Login/Register
+        </button>
+    </div>
+
+    <!-- end of header -->
+</header>

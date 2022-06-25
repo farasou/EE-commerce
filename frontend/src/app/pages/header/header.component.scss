@@ -1,0 +1,103 @@
+$i-font-size: 1.2rem;
+$accent-color: #e64b41;
+
+header{
+    background-color: #fff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // border-bottom: 2px solid #000;
+
+    #most-left{
+        display: flex;
+        align-items: center;
+        #brand{
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: $accent-color;
+            margin-left: 1rem;
+
+            span{
+                font-size: .5rem;
+                vertical-align: super;
+            }
+        }
+        #help-button{
+            border: none;
+            i{
+                color: $accent-color;
+                font-size: $i-font-size;
+            }
+            .dropdown-menu li{
+                width: 100%;
+                i{float: right;}
+            }
+            .dropdown-toggle::after{
+                display: none;
+            }
+        }
+    }
+
+    #main-search{
+        width: 700px;
+        border-radius: .5rem;
+        height: 40px;
+        transition: ease-in-out .2s;
+
+        &:hover{
+            background-color: #eceef1;
+            color: #262626;
+        }
+        label{
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 0 1rem;
+        }
+        i{
+            font-size: $i-font-size;
+            margin-right: 1rem;
+        }
+        input{
+            width: 100%;
+            border: none;
+            font-size: 1rem;
+            color: #000;
+            background-color: transparent;
+            outline: none;
+        }
+    }
+
+    #controls{
+        height: 50px;
+        #auth-button{
+            background-color: #1d92f2;
+            color: #fff;
+            border-radius: 0;
+            outline: none;
+        }
+        #add-new-product-button{
+            background-color: $accent-color;
+            color: #fff;
+            border-radius: 0;
+            outline: none;
+        }
+        button{
+            height: 100%;
+            border: none;
+            font-size: .8rem;
+            text-transform: lowercase;
+            padding: 0 1rem;
+            i{
+                margin-right: .5rem;
+            }
+            &:hover{
+                border: none;
+            }
+        }
+    }
+    // end of header
+}
