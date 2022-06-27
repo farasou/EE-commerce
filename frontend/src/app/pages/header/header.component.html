@@ -10,7 +10,10 @@
             </ul>
         </div>
     
-        <div id="brand">
+        <div 
+            id="brand"
+            routerLink="/home"
+        >
             <span>NOT</span>Tayara
         </div>
     </div>
@@ -22,16 +25,20 @@
         </label>
     </div>
     
-    <div id="controls">
+    <div id="controls" class="d-flex">
         <button class="btn" id="auth-button">
             <i class="bi bi-person"></i>
-            Login/Register
+            Login / Register
         </button>
 
-        <button class="btn" id="add-new-product-button">
+        <a 
+            class="btn d-flex align-items-center" 
+            id="add-new-product-button"
+            routerLink="/manage-product"
+        >
             <i class="bi bi-gear"></i>
             Manage products
-        </button>
+        </a>
     </div>
 
     <!-- end of header -->

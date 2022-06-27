@@ -12,7 +12,7 @@ header{
     position: fixed;
     top: 0;
     z-index: 10;
-    // border-bottom: 2px solid #000;
+    // border-bottom: 1px solid #e64b41;
 
     #most-left{
         display: flex;
@@ -22,7 +22,7 @@ header{
             font-weight: bold;
             color: $accent-color;
             margin-left: 1rem;
-
+            cursor: pointer;
             span{
                 font-size: .5rem;
                 vertical-align: super;
@@ -49,11 +49,8 @@ header{
         border-radius: .5rem;
         height: 40px;
         transition: ease-in-out .2s;
+        background-color: #eceef1;
 
-        &:hover{
-            background-color: #eceef1;
-            color: #262626;
-        }
         label{
             height: 100%;
             display: flex;
@@ -89,7 +86,8 @@ header{
             border-radius: 0;
             outline: none;
         }
-        button{
+        #auth-button,
+        #add-new-product-button{
             height: 100%;
             border: none;
             font-size: 1rem;
