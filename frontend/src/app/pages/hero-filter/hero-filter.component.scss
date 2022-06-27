@@ -1,11 +1,7 @@
-
-$accent-color: #e64b41;
-$wide-width: 800px;
 section{
-
     width: 100%;
     height: auto;
-    min-height: 500px;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +15,7 @@ section{
             h1{
                 font-size: 3rem;
                 font-weight: bold;
-                color: $accent-color;
+                color: var(--accent-color);
                 span{
                     font-size: 1rem;
                     vertical-align: super;
@@ -27,12 +23,12 @@ section{
             }
         }
         #search-bar{
-            width: $wide-width;
+            width: var(--wide-width);
             height: 50px;
             padding: 0 1rem;
             border-radius: 1.5rem;
             box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-            background-color: #fff;
+            background-color:  var(--main-bg-white);
             label{
                 display: flex;
                 align-items: center;
@@ -40,7 +36,7 @@ section{
                 i{
                     margin-right: 1rem;
                     font-size: 1.5rem;
-                    color: #b4bdc9;
+                    color: var(--input-text-color);
                 }
                 input{
                     height: 100%;
@@ -49,17 +45,17 @@ section{
                     outline: none;
                     background-color: transparent;
                     &::placeholder{
-                        color: #b4bdc9;
+                        color: var(--input-text-color);
                     }
                 }
             }
             &:hover{
-                background-color: #eceef1;
+                background-color: var(--secondary-bg-off-white);
                 color: #262626;
             }
         }
         #category-picker{
-            width: $wide-width - 100px;
+            width: var(--wide-width) ;
             margin: 2rem auto;
             display: flex;
             flex-direction: row;
@@ -74,12 +70,12 @@ section{
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: #f7fafc;
+                    background-color: var(--third-bg-off-white);
                     border-radius: .5rem;
                 }
                 p{
                     margin-top: .5rem;
-                    color: #a8afb9;
+                    color: var(--fourth-bg-off-white);
                 }
             }
             img{
