@@ -11,24 +11,29 @@ section{
         text-align: center;
 
         #brand{
-            margin-bottom: 2rem;
             h1{
                 font-size: 3rem;
                 font-weight: bold;
                 color: var(--accent-color);
+                height: 200px;
                 span{
                     font-size: 1rem;
                     vertical-align: super;
                 }
             }
         }
+        #dead-center{
+            position: relative;
+            top: -100px;
+        }
         #search-bar{
             width: var(--wide-width);
             height: 50px;
             padding: 0 1rem;
+            border: 1px solid rgba(0, 0, 0, .1);
             border-radius: 1.5rem;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
             background-color:  var(--main-bg-white);
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
             label{
                 display: flex;
                 align-items: center;
@@ -51,7 +56,7 @@ section{
             }
             &:hover{
                 background-color: var(--secondary-bg-off-white);
-                color: #262626;
+                color: var(--input-text-color);
             }
         }
         #category-picker{
@@ -77,6 +82,12 @@ section{
                     margin-top: .5rem;
                     color: var(--fourth-bg-off-white);
                 }
+                &:hover .header{
+                    background-color: #fef0f0;
+                }
+                &:hover p{
+                    font-weight: 700;
+                }
             }
             img{
                 width: 40px;
@@ -85,7 +96,7 @@ section{
         }
         #image-left-offset{
             position: absolute;
-            top: 0;
+            top: 38px;
             left: -150px;
             transform: translateY(-60px);
             img{
@@ -95,7 +106,7 @@ section{
         }
         #image-right-offset{
             position: absolute;
-            top: 0;
+            top: 35px;
             right: -110px;
             transform: translateY(-70px);
             img{

@@ -2,22 +2,24 @@
     
     <div id="main-center-flex">
         <div id="brand">
-            <h1><span>NOT</span>Tayara</h1>
+            <h1><span>NOT</span>tayara</h1>
         </div>
         
-        <div id="search-bar">
-            <label>
-                <i class="bi bi-search"></i>
-                <input type="text" placeholder="Search">
-            </label>
-        </div>
-
-        <div id="category-picker">
-            <div class="flex-item" *ngFor="let cat of categories">
-                <div class="header">
-                    <img src="{{cat.icon}}" alt="icon" width="30px">
+        <div id="dead-center">
+            <div id="search-bar">
+                <label>
+                    <i class="bi bi-search"></i>
+                    <input type="text" placeholder="Search">
+                </label>
+            </div>
+    
+            <div id="category-picker">
+                <div class="flex-item" *ngFor="let cat of categories">
+                    <div class="header">
+                        <img src="{{cat.icon}}" alt="icon" width="30px">
+                    </div>
+                    <p>{{cat.name}}</p>
                 </div>
-                <p>{{cat.name}}</p>
             </div>
         </div>
         
